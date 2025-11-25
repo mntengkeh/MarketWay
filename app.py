@@ -4,16 +4,19 @@ from components import (
     show_vendor_list_screen,
     show_vendor_detail_screen,
     show_login_screen,
-    show_chat_screen
+    show_chat_screen,
+    show_navigation_screen
 )
 
 st.set_page_config(page_title="MarketWay AI App")
 
 def main():
     st.sidebar.title("Navigation")
-    choice = st.sidebar.radio("Go to", ["Login", "Vendor List", "Vendor Details", "Cart", "Chat"])
+    choice = st.sidebar.radio("Go to", ["Navigation", "Login", "Vendor List", "Vendor Details", "Cart", "Chat"])
 
-    if choice == "Login":
+    if choice == "Navigation":
+        show_navigation_screen()
+    elif choice == "Login":
         show_login_screen()
     elif choice == "Vendor List":
         show_vendor_list_screen()

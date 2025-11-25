@@ -2,3 +2,4 @@ faster-whisper
 sentence-transformers
 numpy
 torch
+streamlit
