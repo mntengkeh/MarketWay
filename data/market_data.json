@@ -1,0 +1,94 @@
+{
+    "lines": [
+        {
+            "id": 0,
+            "name": "Main Entrance",
+            "description": "The main entry point of the market."
+        },
+        {
+            "id": 1,
+            "name": "Fresh Produce Aisle",
+            "description": "Fresh fruits, vegetables, and organic produce."
+        },
+        {
+            "id": 2,
+            "name": "Dairy & Cheese",
+            "description": "Milk, cheese, yogurt, and other dairy products."
+        },
+        {
+            "id": 3,
+            "name": "Bakery",
+            "description": "Freshly baked bread, pastries, and cakes."
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "Organic Bananas",
+            "description": "Sweet and creamy organic bananas.",
+            "price": 1.99,
+            "line_id": 1
+        },
+        {
+            "id": 2,
+            "name": "Red Apples",
+            "description": "Crisp and juicy red apples.",
+            "price": 2.49,
+            "line_id": 1
+        },
+        {
+            "id": 3,
+            "name": "Cheddar Cheese",
+            "description": "Sharp cheddar cheese block.",
+            "price": 5.99,
+            "line_id": 2
+        },
+        {
+            "id": 4,
+            "name": "Whole Milk",
+            "description": "Gallon of fresh whole milk.",
+            "price": 3.49,
+            "line_id": 2
+        },
+        {
+            "id": 5,
+            "name": "Sourdough Bread",
+            "description": "Artisan sourdough bread loaf.",
+            "price": 4.99,
+            "line_id": 3
+        },
+        {
+            "id": 6,
+            "name": "Croissant",
+            "description": "Buttery and flaky croissant.",
+            "price": 2.99,
+            "line_id": 3
+        }
+    ],
+    "connections": [
+        {
+            "source": 0,
+            "target": 1,
+            "distance": 10,
+            "direction": "North"
+        },
+        {
+            "source": 1,
+            "target": 2,
+            "distance": 15,
+            "direction": "East"
+        },
+        {
+            "source": 2,
+            "target": 3,
+            "distance": 10,
+            "direction": "South"
+        },
+        {
+            "source": 1,
+            "target": 3,
+            "distance": 20,
+            "direction": "South-East"
+        }
+    ]
+}
