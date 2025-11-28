@@ -7,7 +7,7 @@ import shutil
 
 from app.services.data_loader import data_loader
 from app.services.search_service import search_service
-from app.services.voice_service import voice_serviceE
+from app.services.voice_service import voice_service
 from app.services.image_service import image_service
 from app.services.navigation_service import navigation_service
 from app.core.config import settings
