@@ -223,22 +223,22 @@ export default function ChatPage() {
 
                 {/* Image Modal */}
                 {selectedImage && (
-                    <div className="absolute inset-0 z-[60] bg-black/90 backdrop-blur-md flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
+                    <div className="absolute inset-0 z-[60] flex items-center justify-center" onClick={() => setSelectedImage(null)}>
                         <button
                             onClick={() => setSelectedImage(null)}
-                            className="absolute top-4 right-4 z-10 p-2 text-white/70 hover:text-white transition-colors"
+                            className="absolute top-6 right-6 z-10 p-3 bg-white/90 hover:bg-white rounded-full transition-all shadow-lg"
+                            aria-label="Close image"
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
-                        <div className="relative w-full h-full max-w-4xl max-h-[80vh] flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
-                            <img
-                                src={selectedImage}
-                                alt="Full view"
-                                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
-                            />
-                        </div>
+                        <img
+                            src={selectedImage}
+                            alt="Full view"
+                            className="w-screen h-screen object-cover"
+                            onClick={(e) => e.stopPropagation()}
+                        />
                     </div>
                 )}
 

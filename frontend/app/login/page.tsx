@@ -15,23 +15,26 @@ export default function LoginPage() {
     return (
         <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 bg-slate-900 text-white font-sans">
             {/* Left Side - Brand/Image */}
-            <div className="hidden md:flex flex-col justify-center items-center relative p-12 bg-gradient-to-br from-teal-900 via-slate-900 to-purple-900 overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
-                <div className="z-10 text-center animate-fade-in-up">
-                    <div className="relative w-72 h-72 mb-8 mx-auto">
-                        <Image
-                            src="/logo.png"
-                            alt="Sabi Market Logo"
-                            fill
-                            style={{ objectFit: "contain" }}
-                            className="drop-shadow-2xl"
-                            priority
-                        />
-                    </div>
-                    <h1 className="text-5xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-purple-400">
+            <div className="hidden md:flex flex-col justify-center items-center relative p-12 overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0">
+                    <Image
+                        src="/Background.jpg"
+                        alt="Market Background"
+                        fill
+                        style={{ objectFit: "cover" }}
+                        className="brightness-50"
+                        priority
+                    />
+                </div>
+                {/* Dark overlay for better text readability */}
+                <div className="absolute inset-0 bg-black/40"></div>
+
+                <div className="z-10 text-center max-w-2xl px-8">
+                    <h1 className="text-6xl font-bold mb-6 text-white drop-shadow-2xl leading-tight">
                         Sabi Market
                     </h1>
-                    <p className="text-xl text-slate-300">
+                    <p className="text-2xl text-white/95 drop-shadow-lg font-light tracking-wide">
                         Discover your world, smarter and faster.
                     </p>
                 </div>

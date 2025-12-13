@@ -6,68 +6,67 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#334155] text-white font-sans overflow-hidden">
       {/* Hero Section - 60% height */}
-      <section className="h-[60vh] w-full flex items-center justify-center p-8 relative">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20 bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-        <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 w-full">
-          {/* Left Column: Logo */}
-          <div className="flex justify-center md:justify-end">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 animate-float">
-              <div className="absolute inset-0 bg-teal-500/30 rounded-full blur-3xl animate-pulse"></div>
-              <Image
-                src="/logo.png"
-                alt="Sabi Market Logo"
-                fill
-                style={{ objectFit: "contain" }}
-                className="drop-shadow-2xl"
-                priority
-              />
-            </div>
-          </div>
+      <section className="h-[60vh] w-full relative overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <Image
+            src="/friontmarket.jpg"
+            alt="Sabi Market"
+            fill
+            style={{ objectFit: "cover" }}
+            className="brightness-50"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+        </div>
 
-          {/* Right Column: App Name & CTA */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-teal-200 via-cyan-400 to-purple-400">
-              Sabi Market
-            </h1>
-            <p className="text-lg md:text-xl text-slate-300 max-w-md">
-              AI-powered product discovery. Find exactly what you need, instantly.
-            </p>
-            <Link href="/login">
-              <button className="group relative px-8 py-4 bg-teal-500 hover:bg-teal-400 text-slate-900 font-bold rounded-full text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(45,212,191,0.5)] active:scale-95">
-                <span className="relative z-10 flex items-center gap-2">
-                  Get Started
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2.5}
-                    stroke="currentColor"
-                    className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </Link>
+        {/* Content Overlay */}
+        <div className="relative z-10 h-full flex items-center justify-center p-8">
+          <div className="container mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-teal-200 via-cyan-400 to-purple-400 mb-6 animate-fade-in">
+                Sabi Market
+              </h1>
+              <p className="text-xl md:text-2xl text-slate-200 max-w-2xl mb-8 leading-relaxed">
+                AI-powered product discovery. Find exactly what you need, instantly.
+              </p>
+              <Link href="/login">
+                <button className="group relative px-10 py-5 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-400 hover:to-cyan-400 text-slate-900 font-bold rounded-full text-xl transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(45,212,191,0.6)] active:scale-95">
+                  <span className="relative z-10 flex items-center gap-3">
+                    Get Started
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2.5}
+                      stroke="currentColor"
+                      className="w-6 h-6 group-hover:translate-x-1 transition-transform"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section - 40% height */}
-      <section className="h-[40vh] w-full bg-white/5 backdrop-blur-sm border-t border-white/10 flex items-center justify-center p-6">
-        <div className="container mx-auto max-w-6xl w-full">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+      {/* Stats Section - 30% height */}
+      <section className="h-[30vh] w-full bg-white/5 backdrop-blur-sm border-t border-white/10 flex items-center justify-center p-6">
+        <div className="container mx-auto max-w-4xl w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
             <StatCard
               label="Active Users"
               value="50k+"
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8"
+                  className="h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -82,12 +81,12 @@ export default function Home() {
               }
             />
             <StatCard
-              label="Markets Listed"
-              value="120+"
+              label="Big Market Listed"
+              value="1"
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8"
+                  className="h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -107,7 +106,7 @@ export default function Home() {
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8"
+                  className="h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

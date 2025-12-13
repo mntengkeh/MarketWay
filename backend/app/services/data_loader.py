@@ -56,12 +56,16 @@ class DataLoader:
             line_name = line.get("line_name", "")
             items = line.get("items_sold", [])
             # Check if query matches line name or any item
-            if query in line_name.lower():
+            # We check if the item is in the query (e.g. "shoes" in "where are the shoes")
+            # OR if the query is in the line name (e.g. "godly" in "godly line")
+            # OR if the line name is in the query (e.g. "godly line" in "where is godly line")
+            
+            if query in line_name.lower() or line_name.lower() in query:
                 results.append(line)
                 continue
             
             for item in items:
-                if query in item.lower():
+                if item.lower() in query or query in item.lower():
                     results.append(line)
                     break
         return results

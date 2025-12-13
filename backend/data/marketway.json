@@ -2,6 +2,7 @@
     "market_name": "Bamenda Main Market",
     "lines": [
         {
+            "id": "LI",
             "line_name": "Mothers Line",
             "items_sold": [
                 "medicine",
@@ -14,6 +15,7 @@
             }
         },
         {
+            "id": "LII",
             "line_name": "Family Line",
             "items_sold": [
                 "drinks",
@@ -28,6 +30,7 @@
             }
         },
         {
+            "id": "LIII",
             "line_name": "Magazine Line",
             "items_sold": [
                 "pharmacies",
@@ -40,6 +43,7 @@
             }
         },
         {
+            "id": "LIV",
             "line_name": "Onitsha Line",
             "items_sold": [
                 "cosmetics",
@@ -52,6 +56,7 @@
             }
         },
         {
+            "id": "LV",
             "line_name": "Best Line",
             "items_sold": [
                 "pharmacies",
@@ -65,6 +70,7 @@
             }
         },
         {
+            "id": "L10",
             "line_name": "Fish Line",
             "items_sold": [
                 "dryfish"
@@ -75,6 +81,7 @@
             }
         },
         {
+            "id": "L9",
             "line_name": "Obama Line",
             "items_sold": [
                 "medicine",
@@ -87,6 +94,7 @@
             }
         },
         {
+            "id": "L8",
             "line_name": "Peaceful Line",
             "items_sold": [
                 "babystuff",
@@ -99,6 +107,7 @@
             }
         },
         {
+            "id": "L7",
             "line_name": "Blessed Line",
             "items_sold": [
                 "shoes",
@@ -112,6 +121,7 @@
             }
         },
         {
+            "id": "L6",
             "line_name": "Victory Line",
             "items_sold": [
                 "beads",
@@ -130,6 +140,7 @@
             }
         },
         {
+            "id": "L5",
             "line_name": "Universal Line",
             "items_sold": [
                 "clothes",
@@ -145,6 +156,7 @@
             }
         },
         {
+            "id": "L4",
             "line_name": "Fashion Line",
             "items_sold": [
                 "clothes",
@@ -159,6 +171,7 @@
             }
         },
         {
+            "id": "L3",
             "line_name": "Wisdom Line",
             "items_sold": [
                 "clothes",
@@ -173,6 +186,7 @@
             }
         },
         {
+            "id": "L2",
             "line_name": "Godly Line",
             "items_sold": [
                 "shoes",
@@ -187,6 +201,7 @@
             }
         },
         {
+            "id": "L1",
             "line_name": "Rapa Line",
             "items_sold": [],
             "layout": {
